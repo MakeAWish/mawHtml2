@@ -1,0 +1,51 @@
+{% extends "../../layout/_base.twig" %}
+
+{% block body %}
+<ul>
+  <li>
+    <a href="/app_dev.php/admin/user/new">Create a new entry</a>
+  </li>
+</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>IsAdmin</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+    <tr>
+      <td>
+        <a href="#">{{ user.id }}</a>
+      </td>
+      <td>
+        {{ user.username }}
+      </td>
+      <td>
+        {{ user.email }}
+      </td>
+      <td>
+        {{ user.isAdmin ? 'Administrateur' : 'Utilisateur' }}
+      </td>
+      <td>
+        <ul>
+          <li>
+            <a href="/pages/wish/index.html">Vœux</a>
+          </li>
+          <li>
+            <a href="/pages/user/show.html">Détails</a>
+          </li>
+          <li>
+            <a href="/pages/user/edit.html">Modifier</a>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

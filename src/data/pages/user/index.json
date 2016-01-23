@@ -1,0 +1,24 @@
+{
+  "title": "Liste",
+  "description": "",
+  "notes": "",
+  "valid": {
+    "css": "N/A",
+    "js": "N/A",
+    "chrome": "N/A",
+    "firefox": "N/A",
+    "ie": "IE: N/A<br>EDGE: N/A",
+    "safari": "N/A"
+  },
+  "users": [{
+    "id": 1,
+    "username": "admin",
+    "email": "admin@makeawish.com",
+    "isAdmin": true
+  }, {
+    "id": 2,
+    "username": "Marie",
+    "email": "marie@makeawish.com",
+    "isAdmin": false
+  }]
+}

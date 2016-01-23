@@ -9,5 +9,11 @@
     "firefox": "N/A",
     "ie": "IE: N/A<br>EDGE: N/A",
     "safari": "N/A"
+  },
+  "user": {
+    "id": 2,
+    "username": "Marie",
+    "email": "marie@makeawish.com",
+    "isAdmin": false
   }
 }
