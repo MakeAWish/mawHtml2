@@ -1,0 +1,56 @@
+{% extends "../../layout/_base.twig" %}
+
+{% block body %}
+<main>
+  <form class="editor" name="wish" method="post">
+    <article class="wish sport">
+      <header>Sport</header>
+      <div id="wish">
+
+        <div class="titre">
+          <label for="wish_title" class="required">Titre</label>
+          <input type="text" id="wish_title" name="wish[title]" required="required" maxlength="100" class="form-control" value="Vœu #0">
+        </div>
+
+        <div class="lien">
+          <label for="wish_link">Lien</label>
+          <textarea id="wish_link" name="wish[link]" class="form-control">https://borisschapira.com</textarea>
+        </div>
+
+        <div class="description">
+          <label for="wish_description">Description</label>
+          <textarea id="wish_description" name="wish[description]" class="form-control">Description du vœu #0</textarea>
+        </div>
+
+        <div class="categorie">
+          <label for="wish_category" class="required">Catégorie</label>
+          <select id="wish_category" name="wish[category]" class="form-control">
+            <option value="1">Voyage</option>
+            <option value="2">Multimédia</option>
+            <option value="3">Animaux</option>
+            <option value="4">Mode</option>
+            <option value="5" selected="selected">Sport</option>
+            <option value="6">Décoration</option>
+            <option value="7">Culture</option>
+            <option value="8">Jardinage</option>
+          </select>
+        </div>
+
+        <div class="importance">
+          <label for="wish_weight" class="required">Importance</label>
+          <select id="wish_weight" name="wish[weight]" class="form-control">
+            <option value="0" selected="selected">Pourquoi pas ?</option>
+            <option value="1">J'en ai envie</option>
+            <option value="2">Vitale !</option>
+          </select>
+        </div>
+
+      </div>
+      <footer>
+        <input type="submit" value="Valider">
+        <a href="/app_dev.php/wish/1">Annuler</a>
+      </footer>
+    </article>
+    <input type="hidden" id="wish__token" name="wish[_token]" value="GePlwW1CQTWDP-OAOzQVPC4_AH2ZO17SN4cDwJtZXF8"></form>
+</main>
+{% endblock %}
