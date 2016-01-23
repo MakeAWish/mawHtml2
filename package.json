@@ -9,6 +9,10 @@
     "requirejs": "^2.1.22",
     "underscore": "^1.8.3"
   },
+  "scripts": {
+    "build": "gulp build",
+    "live": "gulp live"
+  },
   "devDependencies": {
     "autoprefixer": "^6.0.3",
     "browser-sync": "^2.9.10",
