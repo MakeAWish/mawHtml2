@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
+  <title>Guide des styles CSS</title>
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="public/codehighlight.css">
+  {{{styles}}}
+</head>
+<body class="ca">
+  <header class="ca__header">
+    <div class="ca__pageWrapper">
+      <h1 class="ca__headerLogo">Guide des styles</h1>
+
+      <ul class="ca__headerNav">
+        <li class="ca__headerNavItem"><a class="ca__headerNavLink" href="../../">Liste des pages</a></li>
+        <li class="ca__headerNavItem"><a class="ca__headerNavLink" href="../">Documentation</a></li>
+        <li class="ca__headerNavItem ca__headerNavItem-selected"><a class="ca__headerNavLink" href="./">Guide des styles</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="ca__pageWrapper">
+    <nav class="ca__sidebar">
+      <ul class="ca__sidebarMenu">
+        {{#eachRoot}}
+        <li class="ca__sidebarMenuItem">
+          <a class="ca__sidebarLink{{#ifReference ../rootName}} ca__sidebarLink-highlight{{/ifReference}}"
+             href="section-{{referenceURI}}.html">
+            <span class="ca__sidebarRef">
+              {{#ifNumeric reference}}{{reference}}{{else}}{{autoincrement}}{{/ifNumeric}}
+            </span>
+            {{header}}
+          </a>
+
+          <ul class="ca__sidebarMenu">
+          {{#eachSection reference}}
+            {{#ifDepth 2}}
+            <li class="ca__sidebarMenuItem">
+              <a class="ca__sidebarLink"
+                 href="section-{{../../referenceURI}}.html#{{referenceURI}}">
+                <span class="ca__sidebarRef">
+                  {{#ifNumeric reference}}{{reference}}{{else}}{{autoincrement}}{{/ifNumeric}}
+                </span>
+                {{header}}
+              </a>
+            </li>
+            {{/ifDepth}}
+          {{/eachSection}}
+          </ul>
+        </li>
+        {{/eachRoot}}
+      </ul>
+    </nav>
+
+    <main class="ca__content">
+      {{! SET UP THE HOMEPAGE
+
+          It is the markdown file define in the kss.json configuration }}
+      {{#if homepage}}
+      <article class="ca__md">
+        {{{homepage}}}
+      </article>
+
+      {{! SET UP SECTION AND SUBSECTION
+
+          A depth of 1 indicate a section,
+          A depth greater than 1 indicate a subsection. }}
+      {{else}}
+        {{#eachSection rootName}}
+          <section id="{{referenceURI}}">
+
+          {{! Title of the (sub)section }}
+          <h{{depth}} class="ca__title{{depth}}">
+            <a href="#{{referenceURI}}" class="ca__titleLink">
+              <small>{{#ifNumeric reference}}{{reference}}{{else}}{{autoincrement}}{{/ifNumeric}}</small>
+              {{header}}
+            </a>
+          </h{{depth}}>
+
+          {{! Description of the (sub)section }}
+          {{#if description}}
+            <div class="ca__md">
+              {{{description}}}
+            </div>
+          {{/if}}
+
+          {{! Documentation of possible parameters for the (sub) section }}
+          {{#if parameters}}
+            <div class="ca__tableWrapper">
+              <table class="ca__table">
+                <tbody>
+                {{#eachParameter}}
+                  <tr>
+                    <th scope="row"><code>{{name}}</code></th>
+                    <td>{{{description}}}</td>
+                  </tr>
+                {{/eachParameter}}
+                </tbody>
+              </table>
+            </div>
+          {{/if}}
+
+          {{! Code samples for the (sub) section }}
+          {{#if markup}}
+            <div class="ca__example">
+              <strong class="ca__exampleHead">Exemple{{#if modifiers}}s{{/if}}</strong>
+
+              {{#if modifiers}}<div class="ca__exampleTitle">Style par défaut</div>{{/if}}
+              <div class="ca__exampleMarkup">{{{markup}}}</div>
+
+              {{#eachModifier}}
+                <div class="ca__exampleTitle">
+                  <code>{{name}}</code> — <em>{{{description}}}</em>
+                </div>
+                <div class="ca__exampleMarkup">{{{markup}}}</div>
+              {{/eachModifier}}
+            </div>
+
+            <pre class="prettyprint linenums"><code class="lang-html">{{markup}}</code></pre>
+          {{/if}}
+
+          </section>
+        {{/eachSection}}
+      {{/if}}
+    </main>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="public/kss.js"></script>
+  <script src="public/prettify.js"></script>
+  <script>prettyPrint();</script>
+  {{{scripts}}}
+</body>
+</html>

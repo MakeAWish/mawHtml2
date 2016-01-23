@@ -1,0 +1,10 @@
+{
+  "source":       "./src/css",
+  "homepage":     "styleguide.md",
+  "destination":  "./build/doc/styleguide",
+  "template":     "./.gsk/kss",
+  "css": [
+    "../../css/doc.css",
+    "../../css/styles.css"
+  ]
+}

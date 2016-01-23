@@ -1,0 +1,27 @@
+{% extends "../layout/_base.twig" %}
+{% block nav %}{% endblock %}
+{% block body %}
+<header>* Make a Wish *</header>
+<form method="post">
+  <section>
+    <p>
+      <label for="username">Login :</label>
+      <input id="username" type="text" placeholder=" Login" name="username" required="required"/>
+    </p>
+    <p>
+      <label for="password">Mot de passe :</label>
+      <input id="password" type="password" placeholder=" Mot de passe" name="password" required="required"/>
+    </p>
+    <p>
+      <input type="checkbox" id="remember_me" name="_remember_me" value="on"/>
+      <label for="remember_me">Se souvenir de moi ?</label>
+      <a href="#">
+        Mot de passe oublié&nbsp;?
+      </a>
+    </p>
+  </section>
+  <section class="submit_1">
+    <input class="validate" type="submit" id="_submit" name="_submit" title="Valider" value=" "/>
+  </section>
+</form>
+{% endblock %}

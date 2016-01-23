@@ -1,0 +1,35 @@
+{# _default.twig #}
+{# Ce gabarit est utilisé les pages du projets #}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
+    <title>{{ title }}</title>
+
+    <link href="{% root %}/css/styles.css" rel="stylesheet">
+    {% block jsmodule %}
+    {% endblock %}
+  </head>
+  <body>
+    {% block nav %}
+    <nav>
+      <h1>Make a wish</h1>
+      <div>
+        <a href="#">Marie</a>
+        |
+        <a href="#">
+          Gérer les utilisateurs
+        </a>
+        |
+        <a href="#">
+          Déconnexion
+        </a>
+      </div>
+    </nav>
+    {% endblock %}
+    {% block body %}{% endblock %}
+  </body>
+</html>

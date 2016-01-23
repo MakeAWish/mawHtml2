@@ -1,0 +1,355 @@
+// VARIABLES
+// ----------------------------------------------------------------------------
+// Colors
+$darker-grey: #3A5737;
+$dark-grey: #666666;
+$light-grey: #E6E6E6;
+$dark-gold: #FF4151;
+$dark-red: #990000;
+
+$color-link: $dark-red;
+$color-bg-content: #FFFFFF;
+$color-bg-page: #FAF8F4;
+$color-title: $dark-gold;
+$color-bg-dark-cell: $darker-grey;
+$color-fg-dark-cell: #FFFFFF;
+$color-fg-light-cell: $darker-grey;
+$color-bg-light-cell: #FFFFFF;
+
+
+// Grid
+$column: 4rem;
+$gap: 1rem;
+
+
+// Functions
+// ----------------------------------------------------------------------------
+@function grid-width($nbr) {
+  @return $column * $nbr + $gap * ($nbr - 1);
+}
+
+
+// Mixins
+// ----------------------------------------------------------------------------
+@mixin reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin content-block {
+  border-radius: .5rem;
+  background: $color-bg-content;
+}
+
+@mixin title {
+  font-weight: normal;
+  color: $color-title;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 2rem 0 1rem;
+}
+
+@mixin title1 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  padding-bottom: .8rem;
+  border-bottom: 1px solid $color-title;
+}
+
+@mixin title2 {
+  font-size: 1.45rem;
+  padding-top: .8rem;
+  border-top: 1px solid $color-title;
+}
+
+@mixin title3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-left: 1.5em;
+}
+
+@mixin title4 {
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 3em;
+}
+
+// MAIN STYLES
+// ----------------------------------------------------------------------------
+.ca {
+  font: 1em/140% Georgia, serif;
+  padding: 0;
+  margin: 0;
+  background: $color-bg-page;
+
+  &__pageWrapper {
+    margin: 0 auto;
+    max-width: grid-width(12);
+    overflow: hidden;
+  }
+
+  &__sidebar {
+    @include content-block;
+
+    float: left;
+    width: grid-width(3);
+    box-sizing: border-box;
+    margin: 1rem 0;
+    padding: 1rem;
+
+    &Menu {
+      @include reset-list;
+
+      .ca__sidebarMenu {
+        margin-left: 1rem;
+      }
+    }
+
+    &Link {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $dark-gold;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__content {
+    @include content-block;
+
+    margin: 1rem 0 1rem grid-width(3) + $gap;
+    padding: $gap;
+
+    :first-child :first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__header {
+    background: $color-bg-content;
+    overflow: hidden;
+
+    &Logo {
+      font: 1.5rem Georgia, serif;
+      background: url('../img/clever-age-logo.png') left center no-repeat;
+      background-size: auto 1.2em;
+      margin: 0;
+      padding: 1rem 0 1rem 6rem;
+      float: left;
+    }
+
+    &Nav {
+      @include reset-list;
+
+      float: right;
+
+      &Item {
+        display: inline-block;
+      }
+
+      &Link {
+        display: block;
+        font: 1.25rem Georgia, serif;
+        padding: 1.25rem 0 .75rem;
+        margin: 0 0 0 1rem;
+        color: inherit;
+        text-decoration: none;
+        box-sizing: border-box;
+        border-bottom: 0.25rem solid transparent;
+
+        &:hover,
+        &-selected {
+          border-bottom-color: $dark-grey;
+        }
+      }
+    }
+  }
+
+  &__md {
+    a {
+      color: $color-link;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    code {
+      font-size: 1.2em;
+    }
+
+    em code {
+      font-style: normal;
+    }
+
+    pre,
+    blockquote {
+      @include content-block;
+
+      padding: 1em;
+    }
+
+    blockquote {
+      margin: 1em 0;
+      color: $dark-grey;
+
+      p {
+        margin: 0;
+
+        + p {
+          margin-top: 1em;
+        }
+      }
+    }
+
+    h1 {
+      @include title;
+      @include title1;
+    }
+
+    h2 {
+      @include title;
+      @include title2;
+    }
+
+    h3 {
+      @include title;
+      @include title3;
+    }
+
+    h4,
+    h5,
+    h6 {
+      @include title;
+      @include title4;
+    }
+  }
+
+  &__title {
+    &Link {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover::after {
+        content: '\2714';
+        color: $light-grey;
+      }
+    }
+
+    &1 {
+      @include title;
+      @include title1;
+    }
+
+    &2 {
+      @include title;
+      @include title2;
+    }
+
+    &3 {
+      @include title;
+      @include title3;
+    }
+
+    &4 {
+      @include title;
+      @include title4;
+    }
+  }
+
+  &__table {
+    font: 1.2rem Georgia, serif;
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 40rem;
+
+    &Wrapper {
+      overflow: auto;
+    }
+
+    small {
+      font-style: italic;
+    }
+
+    a {
+      color: $color-link;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    th,
+    td {
+      font-weight: normal;
+      text-align: center;
+      border: 1px solid $light-grey;
+      padding: 0.5em 1em;
+    }
+
+    thead {
+      th {
+        background-color: $color-bg-dark-cell;
+        color: $color-fg-dark-cell;
+      }
+
+      tr:first-of-type th {
+        text-transform: uppercase;
+      }
+    }
+
+    tbody {
+      th,
+      td:last-of-type {
+        text-align: left;
+      }
+
+      th,
+      td {
+        background-color: $color-bg-light-cell;
+        color: $color-fg-light-cell;
+        padding: 1em;
+      }
+    }
+  }
+
+  &__example {
+    border: 1px solid $light-grey;
+    padding: 1rem;
+
+    &Head {
+      display: block;
+      color: $color-fg-dark-cell;
+      background: $color-bg-dark-cell;
+      padding: 1rem;
+      margin: -1rem -1rem 1rem;
+      border-bottom: 1px solid $light-grey;
+    }
+
+    &Title {
+      code {
+        font-size: 1.2em;
+      }
+    }
+
+    &Markup {
+      + .ca__exampleTitle {
+        margin-top: 1rem;
+      }
+
+      &::after {
+        content: '';
+        display: table-cell;
+        clear: both;
+      }
+    }
+  }
+}

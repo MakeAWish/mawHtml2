@@ -1,0 +1,14 @@
+{
+  "title": "Nouveau vœu",
+  "description": "Création d'un nouveau vœu",
+  "notes": "",
+  "valid": {
+    "css"    : "N/A",
+    "js"     : "N/A",
+    "chrome" : "N/A",
+    "firefox": "N/A",
+    "ie"     : "IE: N/A<br>EDGE: N/A",
+    "safari" : "N/A"
+  },
+  "logout": true
+}

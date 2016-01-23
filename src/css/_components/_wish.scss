@@ -1,0 +1,261 @@
+main {
+    display: flex; /* Créer un contexte flexible pour l'agencement horizontal bien distribué */
+    flex-direction: row; /* horizontal */
+    flex-wrap: wrap; /* On passe à la ligne quand il faut ? */
+
+    /* Gouttières horizontales */
+    margin-left: -20px;
+    padding-right: 20px;
+    /* / Gouttières horizontales */
+
+        article {
+            /* Gouttières horizontales */
+            margin-left: 20px;
+            margin-top: 20px;
+            border: 1px solid;
+
+            &.wishlist {
+                /* / Gouttières horizontales */
+                flex: 1 0 20em; /* Occupe au minimum 20em de large, et sinon tout ce que tu peux pour tout remplir */
+                display: inline-flex; /* crée un contexte flex inline pour chaque article (agencement vertical bien distribué) */
+                flex-direction: column; /* vertical */
+                flex-wrap: wrap; /* on passe à la colonne suivant quand il faut ? */
+            }
+
+            @mixin background-opacity($color, $opacity: 0.3) {
+                background-color: $color; /* fallback pourri */
+                background-color: rgba($color, $opacity);
+            }
+
+            @mixin colors($color) {
+                border-color: $color;
+
+                footer, header, h2, div {
+                    border-color: $color;
+                }
+
+                header {
+                    background-color: $color;
+                }
+
+                &.offertmoi {
+                    h2 {
+                        @include background-opacity($color, 0.2);
+                    }
+                }
+
+/* Attention ne sert que pour la page wishlist v2, il faudra supprimer tout ça si les gens ne retiennent pas cette V2 */
+                &.v2 {
+                    h2 {
+                        @include background-opacity($color, 0.2);
+                    }
+                }
+
+/* Fin de l'option v2 */
+            }
+
+            &.offertautre {
+                h2 {
+                    background-color: silver;
+                }
+            }
+
+            &.voyage {
+                @include colors(#16a085);
+            }
+
+            &.multimedia {
+                @include colors(#2c3e50);
+            }
+
+            &.animaux {
+                @include colors(#e67e22);
+            }
+
+            &.sport {
+                @include colors(#f1c40f);
+            }
+
+            &.mode {
+                @include colors(#8e44ad);
+            }
+
+            &.deco {
+                @include colors(#e74c3c);
+            }
+
+            &.cuisine {
+                @include colors(#c0392b);
+            }
+
+            &.culture {
+                @include colors(#3498db);
+            }
+
+            &.jardinage {
+                @include colors(#2ecc71);
+            }
+
+            &.nocat {
+                @include colors(#d8d8d8);
+            }
+
+            header {
+                clear: both;
+                font-family: 'Sofia', cursive;
+                font-size: 1em;
+                margin: 0px;
+                border-bottom: 1px solid;
+                text-shadow: none;
+                color: white;
+            }
+
+            h2 {
+                clear: both;
+                padding: 0 20px 20px 20px;
+                font-family: 'Sofia', cursive;
+                font-size: 1.5em;
+                font-weight: normal;
+                border-bottom: 1px solid;
+                margin-bottom: 0;
+                margin-top: 0;
+                padding-top: 20px;
+                text-align: center;
+                display: block; /* IE fix */
+                flex: 1; /* occupe la hauteur restante laissée par le header et le footer */
+            }
+
+            footer {
+                display: flex; /* crée un contexte flex pour ses enfants */
+                flex-direction: row; /* affichage horizontal */
+                width: 100%;
+                background: url("../images/footer.png") silver repeat fixed;
+                text-align: center;
+
+                a {
+                    flex: 1; /* occupe la largeur restante */
+                    transition: flex .5s;
+                    padding: 0.3em 0em;
+                    display: block;
+                    color: gray;
+                    text-decoration: none;
+                    white-space: nowrap;
+                    font-size: 0.8em;
+
+                    &:hover, &:focus {
+                      flex: 2;
+                      color: black;
+                    }
+
+                }
+            }
+
+        }
+    }
+
+    .linkbox {
+        text-decoration: none;
+        color: black;
+    }
+
+/*********************************************************************************************************************/
+/************************************ Affichage d'un voeu unique *****************************************************/
+/*********************************************************************************************************************/
+
+h3 {
+    clear: both;
+    padding: 0 20px 20px 20px;
+    margin-bottom: 0;
+    font-family: 'Sofia', cursive;
+    font-size: 1.5em;
+    font-weight: normal;
+    text-align: center;
+}
+
+article {
+
+    &.wish {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    div {
+        border-bottom: 1px solid;
+    }
+}
+
+#wish {
+    padding: 0 20px 0 20px;
+
+    a {
+        display: inherit;
+        text-align: center;
+        font-family: 'Sofia', cursive;
+        font-size: 1.1em;
+    }
+}
+
+.comment {
+    clear: both;
+    margin: 0px auto;
+    width: 60%;
+
+    h4 {
+        margin: 0px auto;
+        font-weight: normal;
+        text-decoration: underline;
+        display: inline-block;
+
+        &.date {
+            float: right;
+        }
+    }
+
+    p{
+        text-align: left;
+    }
+
+    textarea {
+        margin: 10px auto;
+        width: 100%;
+    }
+
+    label {
+        color: red;
+        font-weight: bold;
+        padding-left: 5px;
+    }
+
+    input[type="submit"] {
+        display: block;
+        margin-top: 10px;
+    }
+
+}
+
+/*********************************************************************************************************************/
+/************************************ Page de modification d'un voeu *************************************************/
+/*********************************************************************************************************************/
+
+.titre, .lien, .description, .categorie, .importance {
+    margin: 20px auto;
+    border: none;
+
+    textarea {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/*********************************************************************************************************************/
+/************************************ Page d'ajout d'un voeu *********************************************************/
+/*********************************************************************************************************************/
+
+.nocat {
+
+    header {
+        color: #d8d8d8;
+    }
+}

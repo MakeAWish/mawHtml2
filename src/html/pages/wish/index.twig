@@ -1,0 +1,22 @@
+{% extends "../../layout/_base.twig" %}
+
+{% block body %}
+<main>
+  {% for wish in wishes %}
+  <article class="wishlist {{ wish.category.slug }}">
+    <header>
+      {{ wish.category.name }}
+    </header>
+    <h2>
+      {{ wish.title }}
+    </h2>
+    <footer>
+      {% if wish.link is not empty %}
+      <a href="#">Lien</a>{% endif %}
+      <a href="#">Détails</a>
+      <a href="#">Modifier</a>
+    </footer>
+  </article>
+  {% endfor %}
+</main>
+{% endblock %}
