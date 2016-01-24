@@ -16,14 +16,17 @@
   <body>
     {% block nav %}
     <nav>
-      <h1><a href="/pages/wish/">Make a wish</a></h1>
-      <div>
+      <input type="checkbox" id="navcheck" role="button" title="menu">
+      <label for="navcheck" aria-hidden="true" title="menu">
+        <h1>
+          Make a wish
+        </h1>
+      </label>
+      <div class="menu">
         <a href="#">Marie</a>
-        |
         <a href="/pages/user">
           Gérer les utilisateurs
         </a>
-        |
         <a href="#">
           Déconnexion
         </a>
