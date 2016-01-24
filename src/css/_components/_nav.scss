@@ -1,148 +1,160 @@
 nav {
-     margin: 0;
-     background-color: black;
-     color: white;
-     display: block;
-     line-height: 60px;
-     height: 60px;
-     width: 100%;
-     -moz-box-shadow: 0px 0px 5px black;
-     -webkit-box-shadow: 0px 0px 5px black;
-     box-shadow: 0px 0px 5px black;
-     position: relative;
-     z-index: 2;
-		 font-family: 'Alex Brush', cursive;
+  margin: 0;
+  background-color: black;
+  color: white;
+  display: block;
+  line-height: 60px;
+  height: 60px;
+  width: 100%;
+  -moz-box-shadow: 0 0 5px black;
+  -webkit-box-shadow: 0 0 5px black;
+  box-shadow: 0 0 5px black;
+  position: relative;
+  z-index: 2;
+  font-family: 'Alex Brush', cursive;
 
-    h1 {
-        margin: 0px;
-        padding-right: 1em;
-        float: right;
-        font-family: 'Alex Brush', cursive;
-        font-weight: normal;
-        font-size: 2.5em;
+  h1 {
+    margin: 0;
+    padding-right: 1em;
+    float: right;
+    font-family: 'Alex Brush', cursive;
+    font-weight: normal;
+    font-size: 2.5em;
+  }
+  $timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+
+  input {
+    position: fixed;
+    opacity: 0;
+  }
+  label {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+    &::before {
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(darken(#3498db,30%),.6);
+      content: '';
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s $timing-function;
     }
-}
+  }
+  input:focus + label,
+  label:hover {
+    .burger {
+      opacity: 0.7;
+    }
+  }
 
-$timing-function : cubic-bezier(0.190, 1.000, 0.220, 1.000);
-
-input {
-	position: fixed;
-	opacity: 0;
-}
-label {
-	position: absolute;
-	margin: 0;
-	padding: 0;
-	border: none;
-	outline: none;
-	background: none;
-	cursor: pointer;
-	width:100%;
-	&::before {
-		position: fixed;
-		z-index: 1;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: rgba(darken(#3498db,30%),.6);
-		content: '';
-		opacity: 0;
-		pointer-events: none;
-		transition: opacity .5s $timing-function;
-	}
-}
-
-input:focus + label,
-label:hover {
-	.burger {
-		opacity: .7;
-	}
-}
-
-.menu {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	z-index: 2;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	align-items: flex-start;
-	transform: translate3d(0,0,0); /* material acceleration */
-	transform: translateX(-100%);
-	transition: transform .5s $timing-function;
-	&::before {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		z-index: -1;
-		width: 25em;
-		//background: #d62956;
-		background: url("../img/footer.png") silver repeat fixed;
-		content: '';
-		transform: skewX(15deg) translateX(-100%);
-		transform-origin: bottom left;
-		transition: transform .5s $timing-function;
-	}
-	a {
-		margin: .5em 0;
-		padding: .2em 2em;
-		font-size: 1.5em;
-		color: #000;
-		text-decoration: none;
-		font-weight: 500;
-		transform: translateX(-100%);
-		transition: color .15s, transform .5s;
-		transition-timing-function: $timing-function;
-		&:nth-child(1) { transition-delay: 0s, 100ms; }
-		&:nth-child(2) { transition-delay: 0s, 150ms; }
-		&:nth-child(3) { transition-delay: 0s, 200ms; }
-		&:nth-child(4) { transition-delay: 0s, 250ms; }
-		&:nth-child(5) { transition-delay: 0s, 300ms; }
-		&:nth-child(6) { transition-delay: 0s, 350ms; }
-		&:hover, &:focus {
-			color: black;
-		}
-	}
-}
-
-[id="navcheck"]:checked {
-	& + label {
-		&::before {
-			opacity: 1;
-			pointer-events: auto;
-		}
-		.burger {
-			&::before,
-			&::after {
-				width: 141.42%; // Pythagore!
-			}
-			&::before {
-				transform: rotate(45deg) translateY(-50%);
-			}
-			&::after {
-				transform: rotate(-45deg) translateY(50%);
-			}
-			.bar {
-				transform: scale(0.1);
-			}
-		}
-	}
-	& ~ .menu {
-		transform: translateX(0);
-		&::before {
-			transform: skewX(15deg) translateX(0);
-		}
-		a {
-			transform: translateX(0);
-		}
-	}
-	& ~ main .content {
-		transform: translateX(3em);
-		transform-origin: left center;
-		filter: blur(2px); /* quite laggy :S */
-	}
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translate3d(0,0,0);
+    /* material acceleration */
+    transform: translateX(-100%);
+    transition: transform 0.5s $timing-function;
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      width: 25em;
+      //background: #d62956;
+      background: url(../img/footer.png) silver repeat fixed;
+      content: '';
+      transform: skewX(15deg) translateX(-100%);
+      transform-origin: bottom left;
+      transition: transform 0.5s $timing-function;
+    }
+    a {
+      margin: 0.5em 0;
+      padding: 0.2em 2em;
+      font-size: 1.5em;
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+      transform: translateX(-100%);
+      transition: color 0.15s, transform 0.5s;
+      transition-timing-function: $timing-function;
+      &:nth-child(1) {
+        transition-delay: 0s, 100ms;
+      }
+      &:nth-child(2) {
+        transition-delay: 0s, 150ms;
+      }
+      &:nth-child(3) {
+        transition-delay: 0s, 200ms;
+      }
+      &:nth-child(4) {
+        transition-delay: 0s, 250ms;
+      }
+      &:nth-child(5) {
+        transition-delay: 0s, 300ms;
+      }
+      &:nth-child(6) {
+        transition-delay: 0s, 350ms;
+      }
+      &:hover,
+      &:focus {
+        color: black;
+      }
+    }
+  }
+  [id="navcheck"]:checked {
+    & + label {
+      &::before {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .burger {
+        &::before,
+        &::after {
+          width: 141.42%; // Pythagore!
+        }
+        &::before {
+          transform: rotate(45deg) translateY(-50%);
+        }
+        &::after {
+          transform: rotate(-45deg) translateY(50%);
+        }
+        .bar {
+          transform: scale(0.1);
+        }
+      }
+    }
+    & ~ .menu {
+      transform: translateX(0);
+      &::before {
+        transform: skewX(15deg) translateX(0);
+      }
+      a {
+        transform: translateX(0);
+      }
+    }
+    & ~ main .content {
+      transform: translateX(3em);
+      transform-origin: left center;
+      filter:blur(2px);
+      /* quite laggy :S */
+    }
+  }
 }
