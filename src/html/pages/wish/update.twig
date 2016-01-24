@@ -2,24 +2,24 @@
 
 {% block body %}
 <main>
-  <form class="editor" name="wish" method="post" action="/pages/wish/show.html">
-    <article class="wish sport">
+  <form class="editor" name="wish" method="get" action="/pages/wish/show.html">
+    <article class="wish {{ wish.category.slug }}">
       <header>Sport</header>
       <div id="wish">
 
         <div class="titre">
           <label for="wish_title" class="required">Titre</label>
-          <input type="text" id="wish_title" name="wish[title]" required="required" maxlength="100" class="form-control" value="Vœu #0">
+          <input type="text" id="wish_title" name="wish[title]" required="required" maxlength="100" class="form-control" value="{{ wish.title }}">
         </div>
 
         <div class="lien">
           <label for="wish_link">Lien</label>
-          <textarea id="wish_link" name="wish[link]" class="form-control">https://borisschapira.com</textarea>
+          <textarea id="wish_link" name="wish[link]" class="form-control">{{ wish.link }}</textarea>
         </div>
 
         <div class="description">
           <label for="wish_description">Description</label>
-          <textarea id="wish_description" name="wish[description]" class="form-control">Description du vœu #0</textarea>
+          <textarea id="wish_description" name="wish[description]" class="form-control">{{ wish.description }}</textarea>
         </div>
 
         <div class="categorie">

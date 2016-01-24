@@ -9,5 +9,16 @@
     "firefox": "N/A",
     "ie": "IE: N/A<br>EDGE: N/A",
     "safari": "N/A"
+  },
+  "wish": {
+    "title": "Voeu #1",
+    "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tum Torquatus: Prorsus, inquit, assentior; Sit sane ista voluptas. Itaque contra est, ac dicitis; Duo Reges: constructio interrete. <a href='http://loripsum.net/' target='_blank'>Murenam te accusante defenderem.</a> Quid de Platone aut de Democrito loquar? Graece donan, Latine voluptatem vocant. </p><ol> <li> Vos autem cum perspicuis dubia debeatis illustrare, dubiis perspicua conamini tollere. </li> <li> Nam illud quidem adduci vix possum, ut ea, quae senserit ille, tibi non vera videantur. </li> <li> Quodsi vultum tibi, si incessum fingeres, quo gravior viderere, non esses tui similis; </li> <li> Omnia contraria, quos etiam insanos esse vultis. </li> </ol>",
+    "link": "http://borisschapira.com",
+    "weight": 0,
+    "link": "http://borisschapira.com",
+    "category": {
+      "name": "Voyage",
+      "slug": "voyage"
+    }
   }
 }

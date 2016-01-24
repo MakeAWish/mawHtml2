@@ -1,0 +1,26 @@
+{% extends "../../layout/_base.twig" %}
+
+{% block body %}
+<main>
+  <form class="editor" name="wish" method="get" action="/pages/wish/index.html">
+    <article class="wish {{ wish.category.slug }}">
+      <header>
+        {{ wish.category.name }}
+      </header>
+      <h2>
+        {{ wish.title }}
+      </h2>
+      <h2>
+        {{ wish.description | raw }}
+      </h2>
+      <footer>
+        {% if wish.link is not empty %}
+          <a href="{{ wish.link }}" title="Lien vers &quot;{{ wish.title }}&quot;">Lien</a>
+        {% endif %}
+        <a href="/pages/wish/update.html">Modifier</a>
+        <input type="submit" value="Supprimer">
+      </footer>
+    </article>
+  </form>
+</main>
+{% endblock %}
