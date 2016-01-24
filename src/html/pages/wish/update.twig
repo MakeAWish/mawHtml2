@@ -2,27 +2,27 @@
 
 {% block body %}
 <main>
-  <form class="editor" name="wish" method="get" action="/pages/wish/show.html">
+  <form class="editor" name="wish" method="get" action="show.html">
     <article class="wish {{ wish.category.slug }}">
       <header>Sport</header>
       <div id="wish">
 
-        <div class="titre">
+        <div class="form-group">
           <label for="wish_title" class="required">Titre</label>
           <input type="text" id="wish_title" name="wish[title]" required="required" maxlength="100" class="form-control" value="{{ wish.title }}">
         </div>
 
-        <div class="lien">
+        <div class="form-group">
           <label for="wish_link">Lien</label>
           <textarea id="wish_link" name="wish[link]" class="form-control">{{ wish.link }}</textarea>
         </div>
 
-        <div class="description">
+        <div class="form-group">
           <label for="wish_description">Description</label>
           <textarea id="wish_description" name="wish[description]" class="form-control">{{ wish.description }}</textarea>
         </div>
 
-        <div class="categorie">
+        <div class="form-group">
           <label for="wish_category" class="required">Catégorie</label>
           <select id="wish_category" name="wish[category]" class="form-control">
             <option value="1">Voyage</option>
@@ -36,7 +36,7 @@
           </select>
         </div>
 
-        <div class="importance">
+        <div class="form-group">
           <label for="wish_weight" class="required">Importance</label>
           <select id="wish_weight" name="wish[weight]" class="form-control">
             <option value="0" selected="selected">Pourquoi pas ?</option>
@@ -48,7 +48,7 @@
       </div>
       <footer>
         <input type="submit" value="Valider">
-        <a href="/pages/wish/index.html">Annuler</a>
+        <a href="index.html">Annuler</a>
       </footer>
     </article>
   </form>

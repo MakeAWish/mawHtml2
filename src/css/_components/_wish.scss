@@ -29,35 +29,16 @@ main {
 
             @mixin colors($color) {
                 border-color: $color;
-
                 footer, header, h2, div {
                     border-color: $color;
                 }
-
                 header {
                     background-color: $color;
                 }
-
-                &.offertmoi {
-                    h2 {
-                        @include background-opacity($color, 0.2);
-                    }
-                }
-
-/* Attention ne sert que pour la page wishlist v2, il faudra supprimer tout ça si les gens ne retiennent pas cette V2 */
-                &.v2 {
-                    h2 {
-                        @include background-opacity($color, 0.2);
-                    }
-                }
-
-/* Fin de l'option v2 */
             }
 
-            &.offertautre {
-                h2 {
-                    background-color: silver;
-                }
+            &.app-form {
+                @include colors(silver);
             }
 
             &.voyage {
@@ -174,7 +155,8 @@ h3 {
 
 article {
 
-    &.wish {
+    &.wish,
+    &.app-form {
         width: 60%;
         margin-left: auto;
         margin-right: auto;
@@ -232,25 +214,6 @@ article {
         margin-top: 10px;
     }
 
-}
-
-/*********************************************************************************************************************/
-/************************************ Page de modification d'un voeu *************************************************/
-/*********************************************************************************************************************/
-
-.editor {
-    width: 100%;
-}
-
-.titre, .lien, .description, .categorie, .importance {
-    margin: 20px auto;
-    border: none;
-
-    textarea {
-        display: block;
-        width: 100%;
-        margin-top: 10px;
-    }
 }
 
 /*********************************************************************************************************************/

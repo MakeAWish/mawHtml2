@@ -2,7 +2,7 @@
 
 {% block body %}
 <main>
-  <form class="editor" name="wish" method="get" action="/pages/wish/index.html">
+  <form class="editor" name="wish" method="get" action="index.html">
     <article class="wish {{ wish.category.slug }}">
       <header>
         {{ wish.category.name }}
@@ -17,7 +17,7 @@
         {% if wish.link is not empty %}
           <a href="{{ wish.link }}" title="Lien vers &quot;{{ wish.title }}&quot;">Lien</a>
         {% endif %}
-        <a href="/pages/wish/update.html">Modifier</a>
+        <a href="update.html">Modifier</a>
         <input type="submit" value="Supprimer">
       </footer>
     </article>

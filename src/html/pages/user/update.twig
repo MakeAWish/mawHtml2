@@ -1,0 +1,29 @@
+{% extends "../../layout/_base.twig" %}
+
+{% block body %}
+<main>
+  <article class="app-form">
+    <header>Modifier mon profil</header>
+
+    <form name="fos_user_profile_form" method="get" action="show.html" class="fos_user_profile_edit">
+      <div id="fos_user_profile_form">
+        <div class="form-group">
+          <label for="fos_user_profile_form_username" class="required">Nom d'utilisateur</label>
+          <input type="text" id="fos_user_profile_form_username" name="fos_user_profile_form[username]" required="required" maxlength="255" pattern=".{2,}" value="{{ user.username }}">
+        </div>
+        <div class="form-group">
+          <label for="fos_user_profile_form_email" class="required">Adresse e-mail</label>
+          <input type="email" id="fos_user_profile_form_email" name="fos_user_profile_form[email]" required="required" value="{{ user.email }}">
+        </div>
+        <div class="form-group">
+          <label for="fos_user_profile_form_current_password" class="required">Mot de passe actuel</label>
+          <input type="password" id="fos_user_profile_form_current_password" name="fos_user_profile_form[current_password]" required="required"></div>
+        <input type="hidden" id="fos_user_profile_form__token" name="fos_user_profile_form[_token]" value="RQXA2nS8v24CiQrLHpcr7QMo997rVsxzjNUiSwiiJ8U">
+      </div>
+      <div>
+        <input type="submit" value="Mettre à jour">
+      </div>
+    </form>
+  </article>
+</main>
+{% endblock %}
