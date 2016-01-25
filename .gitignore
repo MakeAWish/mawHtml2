@@ -1,3 +1,5 @@
+Gemfile.lock
+
 # ENVIRONNEMENT GLOBAL
 # -----------------------------------------------------------------------------
 # Pour être sur que le fichier .gitignore n'est jamais ignorer lui-même.
