@@ -7,3 +7,28 @@
 @import '_components/nav';
 @import '_components/wish';
 @import '_components/form';
+
+
+main.user {
+
+	width: 100%;
+	text-align: center;
+	margin-top: 50px;
+	
+	a {
+		color: black;
+		text-decoration: none;
+		font-family: 'Sofia', cursive;
+		font-size: 1.5em;
+	}
+
+	ul {
+		width: 100%;
+		list-style: none;
+	}
+
+	li {
+		line-height: 3em;
+	}
+	
+}

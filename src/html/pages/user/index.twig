@@ -1,51 +1,13 @@
 {% extends "../../layout/_base.twig" %}
 
 {% block body %}
+<main class="user">
 <ul>
-  <li>
-    <a href="#">Create a new entry</a>
-  </li>
+  {% for user in users %}
+    <li>
+      <a href="#">{{user.username}}</a>
+    </li>
+  {% endfor %}
 </ul>
-<table>
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Username</th>
-      <th>Email</th>
-      <th>IsAdmin</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for user in users %}
-    <tr>
-      <td>
-        <a href="#">{{ user.id }}</a>
-      </td>
-      <td>
-        {{ user.username }}
-      </td>
-      <td>
-        {{ user.email }}
-      </td>
-      <td>
-        {{ user.isAdmin ? 'Administrateur' : 'Utilisateur' }}
-      </td>
-      <td>
-        <ul>
-          <li>
-            <a href="../wish/index.html">Vœux</a>
-          </li>
-          <li>
-            <a href="show.html">Détails</a>
-          </li>
-          <li>
-            <a href="update.html">Modifier</a>
-          </li>
-        </ul>
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+</main>
 {% endblock %}

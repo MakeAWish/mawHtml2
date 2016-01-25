@@ -1,6 +1,7 @@
 nav {
   margin: 0;
-  background-color: black;
+  //background-color: black;//
+  background: url(../img/darthvador.png) silver repeat fixed;
   color: white;
   display: block;
   line-height: 60px;
@@ -79,7 +80,7 @@ nav {
       z-index: -1;
       width: 25em;
       //background: #d62956;
-      background: url(../img/footer.png) silver repeat fixed;
+      background: url(../img/darthvador.png) silver repeat fixed;
       content: '';
       transform: skewX(15deg) translateX(-100%);
       transform-origin: bottom left;
@@ -89,7 +90,7 @@ nav {
       margin: 0.5em 0;
       padding: 0.2em 2em;
       font-size: 1.5em;
-      color: #000;
+      color: white;
       text-decoration: none;
       font-weight: 500;
       transform: translateX(-100%);

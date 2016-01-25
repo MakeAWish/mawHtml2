@@ -14,9 +14,6 @@
         {{ wish.description | raw }}
       </h2>
       <footer>
-        {% if wish.link is not empty %}
-          <a href="{{ wish.link }}" title="Lien vers &quot;{{ wish.title }}&quot;">Lien</a>
-        {% endif %}
         <a href="update.html">Modifier</a>
         <input type="submit" value="Supprimer">
       </footer>

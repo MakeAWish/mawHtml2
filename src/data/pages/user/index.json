@@ -20,5 +20,25 @@
     "username": "Marie",
     "email": "marie@makeawish.com",
     "isAdmin": false
+  }, {
+    "id": 3,
+    "username": "Marie",
+    "email": "marie@makeawish.com",
+    "isAdmin": false
+  }, {
+    "id": 2,
+    "username": "Marie",
+    "email": "marie@makeawish.com",
+    "isAdmin": false
+  }, {
+    "id": 2,
+    "username": "Marie",
+    "email": "marie@makeawish.com",
+    "isAdmin": false
+  }, {
+    "id": 2,
+    "username": "Marie",
+    "email": "marie@makeawish.com",
+    "isAdmin": false
   }]
 }
