@@ -2,13 +2,14 @@
 
 {% block body %}
 <main>
+  <a class="otherindex" href="../user/index.html">Retour aux wishlists</a>
   {% for wish in wishes %}
   <article class="wishlist {{ wish.category.slug }}">
     <header>
       {{ wish.category.name }}
     </header>
     <h2>
-      <a href="show.html">{{ wish.title }}</a>
+      <a href="othershow.html">{{ wish.title }}</a>
     </h2>
     <footer>
       {% if wish.link is not empty %}

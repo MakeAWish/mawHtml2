@@ -114,9 +114,16 @@ nav {
       &:nth-child(6) {
         transition-delay: 0s, 350ms;
       }
+      &:nth-child(7) {
+        transition-delay: 0s, 400ms;
+      }
+      &:nth-child(8) {
+        transition-delay: 0s, 450ms;
+      }
       &:hover,
       &:focus {
-        color: black;
+        color: white;
+        text-decoration: underline;
       }
     }
   }

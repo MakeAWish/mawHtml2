@@ -1,1 +1,1 @@
-npm run live
+cmd

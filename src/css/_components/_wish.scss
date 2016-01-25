@@ -1,149 +1,190 @@
 main {
-    display: flex; /* Créer un contexte flexible pour l'agencement horizontal bien distribué */
-    flex-direction: row; /* horizontal */
-    flex-wrap: wrap; /* On passe à la ligne quand il faut ? */
+    display: flex;
 
-    /* Gouttières horizontales */
+    /* Creer un contexte flexible pour l'agencement horizontal bien distribue */
+    flex-direction: row;
+
+    /* horizontal */
+    flex-wrap: wrap;
+
+    /* On passe a la ligne quand il faut ? */
+
+    /* Gouttieres horizontales */
     margin-left: -20px;
     padding-right: 20px;
-    /* / Gouttières horizontales */
 
-        article {
-            /* Gouttières horizontales */
-            margin-left: 20px;
-            margin-top: 20px;
-            border: 1px solid;
+    /* / Gouttieres horizontales */
 
-            &.wishlist {
-                /* / Gouttières horizontales */
-                flex: 1 0 20em; /* Occupe au minimum 20em de large, et sinon tout ce que tu peux pour tout remplir */
-                display: inline-flex; /* crée un contexte flex inline pour chaque article (agencement vertical bien distribué) */
-                flex-direction: column; /* vertical */
-                flex-wrap: wrap; /* on passe à la colonne suivant quand il faut ? */
-            }
+    a.otherindex {
+        text-decoration: none;
+        color: black;
+        width: 100%;
+        text-align: center;
+        font-family: 'Sofia', cursive;
+        font-size: 1.5em;
+        padding-top: 40px;
+        padding-bottom: 20px;
 
-            @mixin background-opacity($color, $opacity: 0.3) {
-                background-color: $color; /* fallback pourri */
-                background-color: rgba($color, $opacity);
-            }
-
-            @mixin colors($color) {
-                border-color: $color;
-                footer, header, h2, div {
-                    border-color: $color;
-                }
-                header {
-                    background-color: $color;
-                }
-            }
-
-            &.app-form {
-                @include colors(silver);
-            }
-
-            &.voyage {
-                @include colors(#16a085);
-            }
-
-            &.multimedia {
-                @include colors(#2c3e50);
-            }
-
-            &.animaux {
-                @include colors(#e67e22);
-            }
-
-            &.sport {
-                @include colors(#f1c40f);
-            }
-
-            &.mode {
-                @include colors(#8e44ad);
-            }
-
-            &.deco {
-                @include colors(#e74c3c);
-            }
-
-            &.cuisine {
-                @include colors(#c0392b);
-            }
-
-            &.culture {
-                @include colors(#3498db);
-            }
-
-            &.jardinage {
-                @include colors(#2ecc71);
-            }
-
-            &.nocat {
-                @include colors(#d8d8d8);
-            }
-
-            header {
-                clear: both;
-                font-family: 'Sofia', cursive;
-                font-size: 1em;
-                margin: 0px;
-                border-bottom: 1px solid;
-                text-shadow: none;
-                color: white;
-            }
-
-            h2 {
-                clear: both;
-                padding: 0 20px 20px 20px;
-                font-family: 'Sofia', cursive;
-                font-size: 1.5em;
-                font-weight: normal;
-                border-bottom: 1px solid;
-                margin-bottom: 0;
-                margin-top: 0;
-                padding-top: 20px;
-                text-align: center;
-                display: block; /* IE fix */
-                flex: 1; /* occupe la hauteur restante laissée par le header et le footer */
-            
-                a {
-                    text-decoration: none;
-                    color: black;
-                }
-
-            }
-
-            footer {
-                display: flex; /* crée un contexte flex pour ses enfants */
-                flex-direction: row; /* affichage horizontal */
-                width: 100%;
-                background: url("../img/darthvador.png") silver repeat fixed;
-                text-align: center;
-
-                a {
-                    flex: 1; /* occupe la largeur restante */
-                    transition: flex .5s;
-                    padding: 0.3em 0em;
-                    display: block;
-                    color: white;
-                    font-family: 'Sofia', cursive;
-                    text-decoration: none;
-                    white-space: nowrap;
-                    font-size: 0.9em;
-
-                    &:hover, &:focus {
-                      text-decoration: underline;
-                    }
-
-                }
-            }
-
+        &:hover, &:focus {
+            text-decoration: underline;
         }
     }
 
-    .linkbox {
-        text-decoration: none;
-        color: black;
+    article {
+        /* Gouttieres horizontales */
+        margin-left: 20px;
+        margin-top: 20px;
+        border: 1px solid;
+
+        &.wishlist {
+            /* / Gouttieres horizontales */
+            flex: 1 0 20em;
+
+            /* Occupe au minimum 20em de large, et sinon tout ce que tu peux pour tout remplir */
+            display: inline-flex;
+
+            /* cree un contexte flex inline pour chaque article (agencement vertical bien distribue) */
+            flex-direction: column;
+
+            /* vertical */
+            flex-wrap: wrap;
+
+            /* on passe a la colonne suivant quand il faut ? */
+        }
+
+        @mixin background-opacity($color, $opacity: 0.3) {
+            background-color: $color;
+
+            /* fallback pourri */
+            background-color: rgba($color, $opacity);
+        }
+
+        @mixin colors($color) {
+            border-color: $color;
+
+            footer, header, h2, div {
+                border-color: $color;
+            }
+
+            header {
+                background-color: $color;
+            }
+        }
+
+        &.app-form {
+            @include colors(silver);
+        }
+
+        &.voyage {
+            @include colors(#16a085);
+        }
+
+        &.multimedia {
+            @include colors(#2c3e50);
+        }
+
+        &.animaux {
+            @include colors(#e67e22);
+        }
+
+        &.sport {
+            @include colors(#f1c40f);
+        }
+
+        &.mode {
+            @include colors(#8e44ad);
+        }
+
+        &.deco {
+            @include colors(#e74c3c);
+        }
+
+        &.cuisine {
+            @include colors(#c0392b);
+        }
+
+        &.culture {
+            @include colors(#3498db);
+        }
+
+        &.jardinage {
+            @include colors(#2ecc71);
+        }
+
+        &.nocat {
+            @include colors(#d8d8d8);
+        }
+
+        header {
+            clear: both;
+            font-family: 'Sofia', cursive;
+            font-size: 1em;
+            margin: 0px;
+            border-bottom: 1px solid;
+            text-shadow: none;
+            color: white;
+        }
+
+        h2 {
+            clear: both;
+            padding: 0 20px 20px 20px;
+            font-family: 'Sofia', cursive;
+            font-size: 1.5em;
+            font-weight: normal;
+            border-bottom: 1px solid;
+            margin-bottom: 0;
+            margin-top: 0;
+            padding-top: 20px;
+            text-align: center;
+            display: block;
+
+            /* IE fix */
+            flex: 1;
+
+            /* occupe la hauteur restante laissee par le header et le footer */
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+        footer {
+            display: flex;
+
+            /* cree un contexte flex pour ses enfants */
+            flex-direction: row;
+
+            /* affichage horizontal */
+            width: 100%;
+            background: url("../img/darthvador.png") silver repeat fixed;
+            text-align: center;
+
+            a {
+                flex: 1;
+
+                /* occupe la largeur restante */
+                transition: flex .5s;
+                padding: 0.3em 0em;
+                display: block;
+                color: white;
+                font-family: 'Sofia', cursive;
+                text-decoration: none;
+                white-space: nowrap;
+                font-size: 0.9em;
+
+                &:hover, &:focus {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
+}
+
+.linkbox {
+    text-decoration: none;
+    color: black;
+}
 
 /*********************************************************************************************************************/
 /************************************ Affichage d'un voeu unique *****************************************************/
@@ -160,7 +201,6 @@ h3 {
 }
 
 article {
-
     &.wish,
     &.app-form {
         width: 60%;
@@ -200,7 +240,7 @@ article {
         }
     }
 
-    p{
+    p {
         text-align: left;
     }
 
@@ -219,7 +259,6 @@ article {
         display: block;
         margin-top: 10px;
     }
-
 }
 
 /*********************************************************************************************************************/
@@ -227,7 +266,6 @@ article {
 /*********************************************************************************************************************/
 
 .nocat {
-
     header {
         color: #d8d8d8;
     }
