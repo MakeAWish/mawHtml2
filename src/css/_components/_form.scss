@@ -1,36 +1,78 @@
 form {
-  input[type=text],
-  input[type=email],
-  input[type=url],
-  input[type=password],
-  textarea {
-    width: 100%;
-    border-top: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-  }
-  input[type=text]:focus,
-  input[type=email]:focus,
-  input[type=url]:focus,
-  input[type=password]:focus,
-  textarea:focus {
-    outline: 0;
-    border-color: #4697e4;
-  }
-}
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
 
-.editor {
-    width: 100%;
-}
+  p {
+    display: flex;
 
-.form-group {
-    margin: 20px auto;
-    border: none;
-
+    input:not([type=submit]),
     textarea {
-        display: block;
-        width: 100%;
-        margin-top: 10px;
+      flex: 1;
+      /* fluid width */
+      display: block;
+      /* IE fix */
     }
+
+    label {
+      width: 7em;
+      margin-right: 0.5em;
+      text-align: right;
+    }
+
+  }
+
+  p.noflex {
+    display: block;
+    text-align: right;
+
+    input:not([type=submit]),
+    textarea {
+      display: inline-block;
+    }
+  }
+
+  .small {
+    margin: 0.5em;
+    font-size:0.8em;
+  }
+
+  input[type="submit"]{
+    margin:auto;
+  }
 }
+
+// input[type=text],
+// input[type=email],
+// input[type=url],
+// input[type=password],
+// textarea {
+//   border-top: 1px solid #ccc;
+//   border-left: 1px solid #ccc;
+//   border-right: 1px solid #eee;
+//   border-bottom: 1px solid #eee;
+// }
+// input[type=text]:focus,
+// input[type=email]:focus,
+// input[type=url]:focus,
+// input[type=password]:focus,
+// textarea:focus {
+//   outline: 0;
+//   border-color: #4697e4;
+// }
+//
+// .editor {
+//     width: 100%;
+// }
+//
+// p,
+// .form-group {
+//     margin: 20px auto;
+//     border: none;
+//
+//     textarea {
+//         display: block;
+//         width: 100%;
+//         margin-top: 10px;
+//     }
+// }

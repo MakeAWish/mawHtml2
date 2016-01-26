@@ -1,7 +1,7 @@
 nav {
   margin: 0;
   //background-color: black;//
-  background: url(../img/darthvador.png) silver repeat fixed;
+  background: url(../img/darthvador.png) $color-grey repeat fixed;
   color: white;
   display: block;
   line-height: 60px;
@@ -12,13 +12,12 @@ nav {
   box-shadow: 0 0 5px black;
   position: relative;
   z-index: 2;
-  font-family: 'Alex Brush', cursive;
+  font-family: $font-title;
 
   h1 {
     margin: 0;
     padding-right: 1em;
     float: right;
-    font-family: 'Alex Brush', cursive;
     font-weight: normal;
     font-size: 2.5em;
   }
@@ -79,8 +78,7 @@ nav {
       left: 0;
       z-index: -1;
       width: 25em;
-      //background: #d62956;
-      background: url(../img/darthvador.png) silver repeat fixed;
+      background: url(../img/darthvador.png) $color-grey repeat fixed;
       content: '';
       transform: skewX(15deg) translateX(-100%);
       transform-origin: bottom left;

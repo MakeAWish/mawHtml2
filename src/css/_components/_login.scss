@@ -1,60 +1,22 @@
 header {
-    margin-top: 12%;
-    margin-bottom: 60px;
-    font-family: 'Alex Brush';
-    font-size: 5em;
-    text-align: center;
-    text-shadow: 2px 1px 2px silver;
+  margin-top: 12%;
+  margin-bottom: 60px;
+  font-family: 'Alex Brush';
+  font-size: 5em;
+  text-align: center;
+  text-shadow: 2px 1px 2px silver;
+  line-height: 1em;
 }
 
-section {
-    display: block;
-    margin: 0px auto;
-    width: 350px;
+.login {
+  display: block;
+  margin: 0 auto;
+  width: 350px;
 
-    p {
-        text-align: right;
-        clear: both;
-        line-height: 20px;
-
-        label {
-            float: left;
-            font-family: 'Sofia';
-            font-size: 20px;
-        }
-
-        input {
-            width: 150px;
-            font-family: 'Arial';
-        }
-
-        a {
-            display: block;
-            float: right;
-            font-size: 0.8em;
-            color: gray;
-            font-style: italic;
-            margin-top: 3px;
-        }
-    }
-
-    &.submit_1 {
-        width: 52px;
-        height: 40px;
-        margin: 40px auto 0px auto;
-
-        input {
-            display: inline-block;
-            vertical-align: top;
-            width: 32px;
-            height: 37px;
-            border: none;
-            cursor: pointer;
-            margin: 0 10px;
-        }
-
-        input.validate {
-            background: url(../img/tick.png) no-repeat;
-        }
-    }
+  input.validate {
+    width: 32px;
+    height: 37px;
+    border: none;
+    background: url(../img/tick.png) no-repeat;
+  }
 }
