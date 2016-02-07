@@ -2,7 +2,6 @@
 
 {% block body %}
 <main>
-  <form class="editor" name="wish" method="get" action="index.html">
     <article class="wish {{ wish.category.slug }}">
       <header>
         {{ wish.category.name }}
@@ -10,9 +9,9 @@
       <h2>
         {{ wish.title }}
       </h2>
-      <h2>
-        {{ wish.description | raw }}
-      </h2>
+      <div class="show">
+                {{ wish.description | raw }}
+            </div>
       <footer>
         <a href="#">Offrir</a>
         <a href="otherindex.html">Retour</a>
