@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
+  <title>Modification</title>
+
+  <link href="./../../css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <input type="checkbox" id="navcheck" role="button" title="menu">
+    <label for="navcheck" aria-hidden="true" title="menu">
+      <h1>
+        Make a wish
+      </h1>
+    </label>
+    <div class="menu">
+      <a href="/pages/wish">
+          Ma Wishlist
+        </a>
+      <a href="/pages/user">
+          Offrir un cadeau
+        </a>
+      <a href="/pages/user">
+          Gérer les utilisateurs
+        </a>
+      <a href="#">Modifier mon profil</a>
+      <a href="#">
+          Déconnexion
+        </a>
+    </div>
+  </nav>
+  <main>
+    <form class="editor" name="wish" method="get" action="show.html">
+      <article class="wish voyage">
+        <header>Sport</header>
+        <div id="wish">
+
+          <div class="form-group">
+            <label for="wish_title" class="required">Titre</label>
+            <input type="text" id="wish_title" name="wish[title]" required="required" maxlength="100" class="form-control" value="Voeu #1">
+          </div>
+
+          <div class="form-group">
+            <label for="wish_link">Lien</label>
+            <textarea id="wish_link" name="wish[link]" class="form-control">http://borisschapira.com</textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="wish_description">Description</label>
+            <textarea id="wish_description" name="wish[description]" class="form-control">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tum Torquatus: Prorsus, inquit, assentior; Sit sane ista voluptas. Itaque contra est, ac dicitis; Duo Reges: constructio interrete. <a href='http://loripsum.net/' target='_blank'>Murenam te accusante defenderem.</a>                Quid de Platone aut de Democrito loquar? Graece donan, Latine voluptatem vocant. </p>
+              <ol>
+                <li> Vos autem cum perspicuis dubia debeatis illustrare, dubiis perspicua conamini tollere. </li>
+                <li> Nam illud quidem adduci vix possum, ut ea, quae senserit ille, tibi non vera videantur. </li>
+                <li> Quodsi vultum tibi, si incessum fingeres, quo gravior viderere, non esses tui similis; </li>
+                <li> Omnia contraria, quos etiam insanos esse vultis. </li>
+              </ol>
+            </textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="wish_category" class="required">Catégorie</label>
+            <select id="wish_category" name="wish[category]" class="form-control">
+              <option value="1">Voyage</option>
+              <option value="2">Multimédia</option>
+              <option value="3">Animaux</option>
+              <option value="4">Mode</option>
+              <option value="5" selected="selected">Sport</option>
+              <option value="6">Décoration</option>
+              <option value="7">Culture</option>
+              <option value="8">Jardinage</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="wish_weight" class="required">Importance</label>
+            <select id="wish_weight" name="wish[weight]" class="form-control">
+              <option value="0" selected="selected">Pourquoi pas ?</option>
+              <option value="1">J'en ai envie</option>
+              <option value="2">Vitale !</option>
+            </select>
+          </div>
+
+        </div>
+        <footer>
+          <input type="submit" value="Valider">
+          <a href="index.html">Annuler</a>
+        </footer>
+      </article>
+    </form>
+  </main>
+</body>
+
+</html>

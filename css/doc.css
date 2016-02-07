@@ -1,0 +1,267 @@
+.ca {
+  font: 1em/140% Georgia, serif;
+  padding: 0;
+  margin: 0;
+  background: #FAF8F4;
+}
+.ca__pageWrapper {
+  margin: 0 auto;
+  max-width: 59rem;
+  overflow: hidden;
+}
+.ca__sidebar {
+  border-radius: .5rem;
+  background: #FFFFFF;
+  float: left;
+  width: 14rem;
+  box-sizing: border-box;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+.ca__sidebarMenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ca__sidebarMenu .ca__sidebarMenu {
+  margin-left: 1rem;
+}
+.ca__sidebarLink {
+  color: inherit;
+  text-decoration: none;
+}
+.ca__sidebarLink:hover, .ca__sidebarLink:active, .ca__sidebarLink:focus {
+  color: #FF4151;
+  text-decoration: underline;
+}
+.ca__content {
+  border-radius: .5rem;
+  background: #FFFFFF;
+  margin: 1rem 0 1rem 15rem;
+  padding: 1rem;
+}
+.ca__content :first-child :first-child {
+  margin-top: 0;
+}
+.ca__header {
+  background: #FFFFFF;
+  overflow: hidden;
+}
+.ca__headerLogo {
+  font: 1.5rem Georgia, serif;
+  background: url("../img/clever-age-logo.png") left center no-repeat;
+  background-size: auto 1.2em;
+  margin: 0;
+  padding: 1rem 0 1rem 6rem;
+  float: left;
+}
+.ca__headerNav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+.ca__headerNavItem {
+  display: inline-block;
+}
+.ca__headerNavLink {
+  display: block;
+  font: 1.25rem Georgia, serif;
+  padding: 1.25rem 0 .75rem;
+  margin: 0 0 0 1rem;
+  color: inherit;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-bottom: 0.25rem solid transparent;
+}
+.ca__headerNavLink:hover, .ca__headerNavLink-selected {
+  border-bottom-color: #666666;
+}
+.ca__md a {
+  color: #990000;
+  text-decoration: none;
+}
+.ca__md a:hover {
+  text-decoration: underline;
+}
+.ca__md code {
+  font-size: 1.2em;
+}
+.ca__md em code {
+  font-style: normal;
+}
+.ca__md pre,
+.ca__md blockquote {
+  border-radius: .5rem;
+  background: #FFFFFF;
+  padding: 1em;
+}
+.ca__md blockquote {
+  margin: 1em 0;
+  color: #666666;
+}
+.ca__md blockquote p {
+  margin: 0;
+}
+.ca__md blockquote p + p {
+  margin-top: 1em;
+}
+.ca__md h1 {
+  font-weight: normal;
+  color: #FF4151;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 2rem 0 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  padding-bottom: .8rem;
+  border-bottom: 1px solid #FF4151;
+}
+.ca__md h2 {
+  font-weight: normal;
+  color: #FF4151;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 2rem 0 1rem;
+  font-size: 1.45rem;
+  padding-top: .8rem;
+  border-top: 1px solid #FF4151;
+}
+.ca__md h3 {
+  font-weight: normal;
+  color: #FF4151;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 2rem 0 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-left: 1.5em;
+}
+.ca__md h4,
+.ca__md h5,
+.ca__md h6 {
+  font-weight: normal;
+  color: #FF4151;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 2rem 0 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 3em;
+}
+.ca__titleLink {
+  color: inherit;
+  text-decoration: none;
+}
+.ca__titleLink:hover::after {
+  content: '\2714';
+  color: #E6E6E6;
+}
+.ca__title1 {
+  font-weight: normal;
+  color: #FF4151;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 2rem 0 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  padding-bottom: .8rem;
+  border-bottom: 1px solid #FF4151;
+}
+.ca__title2 {
+  font-weight: normal;
+  color: #FF4151;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 2rem 0 1rem;
+  font-size: 1.45rem;
+  padding-top: .8rem;
+  border-top: 1px solid #FF4151;
+}
+.ca__title3 {
+  font-weight: normal;
+  color: #FF4151;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 2rem 0 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-left: 1.5em;
+}
+.ca__title4 {
+  font-weight: normal;
+  color: #FF4151;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 2rem 0 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 3em;
+}
+.ca__table {
+  font: 1.2rem Georgia, serif;
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 40rem;
+}
+.ca__tableWrapper {
+  overflow: auto;
+}
+.ca__table small {
+  font-style: italic;
+}
+.ca__table a {
+  color: #990000;
+  text-decoration: none;
+}
+.ca__table a:hover {
+  text-decoration: underline;
+}
+.ca__table th,
+.ca__table td {
+  font-weight: normal;
+  text-align: center;
+  border: 1px solid #E6E6E6;
+  padding: 0.5em 1em;
+}
+.ca__table thead th {
+  background-color: #3A5737;
+  color: #FFFFFF;
+}
+.ca__table thead tr:first-of-type th {
+  text-transform: uppercase;
+}
+.ca__table tbody th,
+.ca__table tbody td:last-of-type {
+  text-align: left;
+}
+.ca__table tbody th,
+.ca__table tbody td {
+  background-color: #FFFFFF;
+  color: #3A5737;
+  padding: 1em;
+}
+.ca__example {
+  border: 1px solid #E6E6E6;
+  padding: 1rem;
+}
+.ca__exampleHead {
+  display: block;
+  color: #FFFFFF;
+  background: #3A5737;
+  padding: 1rem;
+  margin: -1rem -1rem 1rem;
+  border-bottom: 1px solid #E6E6E6;
+}
+.ca__exampleTitle code {
+  font-size: 1.2em;
+}
+.ca__exampleMarkup + .ca__exampleTitle {
+  margin-top: 1rem;
+}
+.ca__exampleMarkup::after {
+  content: '';
+  display: table-cell;
+  clear: both;
+}

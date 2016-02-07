@@ -1,0 +1,1138 @@
+/* normalize-scss 3.0.2+normalize.3.0.2 | MIT/GPLv2 License | bit.ly/normalize-scss */
+/**
+ * Establish a vertical rhythm unit using $base-font-size, $base-line-height,
+ * and $rhythm-unit variables. Also, correct text resizing oddly in IE 6/7 when
+ * body `font-size` is set using `em` units.
+ */
+@import url(http://fonts.googleapis.com/css?family=Alex+Brush);
+@import url(http://fonts.googleapis.com/css?family=Sofia);
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  *display: inline;
+  *zoom: 1;
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ */
+[hidden] {
+  display: none;
+}
+
+/**
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Set 1 unit of vertical rhythm on the top and bottom margin.
+ */
+blockquote {
+  margin: 1.5em 40px;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  /* Set the font-size and line-height while keeping a proper vertical rhythm. */
+  font-size: 2em;
+  line-height: 1.5em;
+  /* Set 1 unit of vertical rhythm on the top and bottom margins. */
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h3 {
+  font-size: 1.17em;
+  line-height: 1.28205128em;
+  margin-top: 1.28205128em;
+  margin-bottom: 1.28205128em;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+h5 {
+  font-size: 0.83em;
+  line-height: 1.80722892em;
+  margin-top: 1.80722892em;
+  margin-bottom: 1.80722892em;
+}
+
+h6 {
+  font-size: 0.67em;
+  line-height: 2.23880597em;
+  margin-top: 2.23880597em;
+  margin-bottom: 2.23880597em;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Set 1 unit of vertical rhythm on the top and bottom margin.
+ */
+p,
+pre {
+  margin: 1.5em 0;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Lists
+   ========================================================================== */
+/**
+ * Address margins set differently in IE 6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1.5em 0;
+}
+
+dd {
+  margin: 0 0 0 40px;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+  /* Improve image quality when scaled in IE 7. */
+  -ms-interpolation-mode: bicubic;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1.5em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ * 4. Address `font-family` inconsistency between `textarea` and other form in IE 7
+ * 5. Improve appearance and consistency with IE 6/7.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+  *font-family: sans-serif;
+  /* 4 */
+  *vertical-align: middle;
+  /* 5 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+  /**
+   * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+   * Safari (but not Chrome) clips the cancel button when the search input has
+   * padding (and `textfield` appearance).
+   */
+}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  margin: 0 2px;
+  /* Apply borders and padding that keep the vertical rhythm. */
+  border-color: #c0c0c0;
+  border-top-width: 0.0625em;
+  border-top-style: solid;
+  padding-top: 0.4625em;
+  border-bottom-width: 0.0625em;
+  border-bottom-style: solid;
+  padding-bottom: 0.9125em;
+  border-left-width: 0.0625em;
+  border-left-style: solid;
+  padding-left: 0.875em;
+  border-right-width: 0.0625em;
+  border-right-style: solid;
+  padding-right: 0.875em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* Box sizing normalization */
+html {
+  box-sizing: border-box;
+}
+
+*, *:after, *::before {
+  box-sizing: inherit;
+}
+
+header {
+  margin-top: 12%;
+  margin-bottom: 60px;
+  font-family: 'Alex Brush';
+  font-size: 5em;
+  text-align: center;
+  text-shadow: 2px 1px 2px silver;
+  line-height: 1em;
+}
+
+.login {
+  display: block;
+  margin: 0 auto;
+  width: 350px;
+}
+.login input.validate {
+  width: 32px;
+  height: 37px;
+  border: none;
+  background: url(../img/tick.png) no-repeat;
+}
+
+nav {
+  margin: 0;
+  background: url(../img/darthvador.png) silver repeat fixed;
+  color: white;
+  display: block;
+  line-height: 60px;
+  height: 60px;
+  width: 100%;
+  box-shadow: 0 0 5px black;
+  position: relative;
+  z-index: 2;
+  font-family: "Alex Brush", cursive;
+}
+nav h1 {
+  margin: 0;
+  padding-right: 1em;
+  float: right;
+  font-weight: normal;
+  font-size: 2.5em;
+}
+nav input {
+  position: fixed;
+  opacity: 0;
+}
+nav label {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  width: 100%;
+}
+nav label::before {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(18, 67, 100, 0.6);
+  content: '';
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+nav input:focus + label .burger,
+nav label:hover .burger {
+  opacity: 0.7;
+}
+nav .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  /* material acceleration */
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+nav .menu::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 25em;
+  background: url(../img/darthvador.png) silver repeat fixed;
+  content: '';
+  -webkit-transform: skewX(15deg) translateX(-100%);
+      -ms-transform: skewX(15deg) translateX(-100%);
+          transform: skewX(15deg) translateX(-100%);
+  -webkit-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+nav .menu a {
+  margin: 0.5em 0;
+  padding: 0.2em 2em;
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: color 0.15s, -webkit-transform 0.5s;
+  transition: color 0.15s, -webkit-transform 0.5s;
+  transition: color 0.15s, transform 0.5s;
+  transition: color 0.15s, transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+          transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+nav .menu a:nth-child(1) {
+  -webkit-transition-delay: 0s, 100ms;
+          transition-delay: 0s, 100ms;
+}
+nav .menu a:nth-child(2) {
+  -webkit-transition-delay: 0s, 150ms;
+          transition-delay: 0s, 150ms;
+}
+nav .menu a:nth-child(3) {
+  -webkit-transition-delay: 0s, 200ms;
+          transition-delay: 0s, 200ms;
+}
+nav .menu a:nth-child(4) {
+  -webkit-transition-delay: 0s, 250ms;
+          transition-delay: 0s, 250ms;
+}
+nav .menu a:nth-child(5) {
+  -webkit-transition-delay: 0s, 300ms;
+          transition-delay: 0s, 300ms;
+}
+nav .menu a:nth-child(6) {
+  -webkit-transition-delay: 0s, 350ms;
+          transition-delay: 0s, 350ms;
+}
+nav .menu a:nth-child(7) {
+  -webkit-transition-delay: 0s, 400ms;
+          transition-delay: 0s, 400ms;
+}
+nav .menu a:nth-child(8) {
+  -webkit-transition-delay: 0s, 450ms;
+          transition-delay: 0s, 450ms;
+}
+nav .menu a:hover, nav .menu a:focus {
+  color: white;
+  text-decoration: underline;
+}
+nav [id="navcheck"]:checked + label::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+nav [id="navcheck"]:checked + label .burger::before, nav [id="navcheck"]:checked + label .burger::after {
+  width: 141.42%;
+}
+nav [id="navcheck"]:checked + label .burger::before {
+  -webkit-transform: rotate(45deg) translateY(-50%);
+      -ms-transform: rotate(45deg) translateY(-50%);
+          transform: rotate(45deg) translateY(-50%);
+}
+nav [id="navcheck"]:checked + label .burger::after {
+  -webkit-transform: rotate(-45deg) translateY(50%);
+      -ms-transform: rotate(-45deg) translateY(50%);
+          transform: rotate(-45deg) translateY(50%);
+}
+nav [id="navcheck"]:checked + label .burger .bar {
+  -webkit-transform: scale(0.1);
+      -ms-transform: scale(0.1);
+          transform: scale(0.1);
+}
+nav [id="navcheck"]:checked ~ .menu {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+nav [id="navcheck"]:checked ~ .menu::before {
+  -webkit-transform: skewX(15deg) translateX(0);
+      -ms-transform: skewX(15deg) translateX(0);
+          transform: skewX(15deg) translateX(0);
+}
+nav [id="navcheck"]:checked ~ .menu a {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+nav [id="navcheck"]:checked ~ main .content {
+  -webkit-transform: translateX(3em);
+      -ms-transform: translateX(3em);
+          transform: translateX(3em);
+  -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  /* quite laggy :S */
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Creer un contexte flexible pour l'agencement horizontal bien distribue */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /* horizontal */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* On passe a la ligne quand il faut ? */
+  /* Gouttieres horizontales */
+  padding-right: 20px;
+  /* / Gouttieres horizontales */
+}
+main a.otherindex {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  text-align: center;
+  font-family: 'Sofia', cursive;
+  font-size: 1.5em;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+main a.otherindex:hover, main a.otherindex:focus {
+  text-decoration: underline;
+}
+main article {
+  /* Gouttieres horizontales */
+  margin-left: 20px;
+  margin-top: 20px;
+  border: 1px solid;
+}
+main article.wishlist {
+  /* / Gouttieres horizontales */
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 20em;
+          flex: 1 0 20em;
+  /* Occupe au minimum 20em de large, et sinon tout ce que tu peux pour tout remplir */
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  /* cree un contexte flex inline pour chaque article (agencement vertical bien distribue) */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* vertical */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* on passe a la colonne suivant quand il faut ? */
+}
+main article.app-form {
+  border-color: silver;
+}
+main article.app-form footer, main article.app-form header, main article.app-form h2, main article.app-form div {
+  border-color: silver;
+}
+main article.app-form header {
+  background-color: silver;
+}
+main article.voyage {
+  border-color: #16a085;
+}
+main article.voyage footer, main article.voyage header, main article.voyage h2, main article.voyage div {
+  border-color: #16a085;
+}
+main article.voyage header {
+  background-color: #16a085;
+}
+main article.multimedia {
+  border-color: #2c3e50;
+}
+main article.multimedia footer, main article.multimedia header, main article.multimedia h2, main article.multimedia div {
+  border-color: #2c3e50;
+}
+main article.multimedia header {
+  background-color: #2c3e50;
+}
+main article.animaux {
+  border-color: #e67e22;
+}
+main article.animaux footer, main article.animaux header, main article.animaux h2, main article.animaux div {
+  border-color: #e67e22;
+}
+main article.animaux header {
+  background-color: #e67e22;
+}
+main article.sport {
+  border-color: #f1c40f;
+}
+main article.sport footer, main article.sport header, main article.sport h2, main article.sport div {
+  border-color: #f1c40f;
+}
+main article.sport header {
+  background-color: #f1c40f;
+}
+main article.mode {
+  border-color: #8e44ad;
+}
+main article.mode footer, main article.mode header, main article.mode h2, main article.mode div {
+  border-color: #8e44ad;
+}
+main article.mode header {
+  background-color: #8e44ad;
+}
+main article.deco {
+  border-color: #e74c3c;
+}
+main article.deco footer, main article.deco header, main article.deco h2, main article.deco div {
+  border-color: #e74c3c;
+}
+main article.deco header {
+  background-color: #e74c3c;
+}
+main article.cuisine {
+  border-color: #c0392b;
+}
+main article.cuisine footer, main article.cuisine header, main article.cuisine h2, main article.cuisine div {
+  border-color: #c0392b;
+}
+main article.cuisine header {
+  background-color: #c0392b;
+}
+main article.culture {
+  border-color: #3498db;
+}
+main article.culture footer, main article.culture header, main article.culture h2, main article.culture div {
+  border-color: #3498db;
+}
+main article.culture header {
+  background-color: #3498db;
+}
+main article.jardinage {
+  border-color: #2ecc71;
+}
+main article.jardinage footer, main article.jardinage header, main article.jardinage h2, main article.jardinage div {
+  border-color: #2ecc71;
+}
+main article.jardinage header {
+  background-color: #2ecc71;
+}
+main article.nocat {
+  border-color: #d8d8d8;
+}
+main article.nocat footer, main article.nocat header, main article.nocat h2, main article.nocat div {
+  border-color: #d8d8d8;
+}
+main article.nocat header {
+  background-color: #d8d8d8;
+}
+main article header {
+  clear: both;
+  font-family: 'Sofia', cursive;
+  font-size: 1em;
+  margin: 0px;
+  border-bottom: 1px solid;
+  text-shadow: none;
+  color: white;
+}
+main article h2 {
+  clear: both;
+  padding: 0 20px 20px 20px;
+  font-family: 'Sofia', cursive;
+  font-size: 1.5em;
+  font-weight: normal;
+  border-bottom: 1px solid;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 20px;
+  text-align: center;
+  display: block;
+  /* IE fix */
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  /* occupe la hauteur restante laissee par le header et le footer */
+}
+main article h2 a {
+  text-decoration: none;
+  color: black;
+}
+main article footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* cree un contexte flex pour ses enfants */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  /* affichage horizontal */
+  width: 100%;
+  background: url("../img/darthvador.png") silver repeat fixed;
+  text-align: center;
+}
+main article footer a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  /* occupe la largeur restante */
+  -webkit-transition: -webkit-box-flex .5s;
+  transition: -webkit-box-flex .5s;
+  transition: flex .5s;
+  transition: flex .5s, -webkit-box-flex .5s, -ms-flex .5s;
+  padding: 0.3em 0em;
+  display: block;
+  color: white;
+  font-family: 'Sofia', cursive;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 0.9em;
+}
+main article footer a:hover, main article footer a:focus {
+  text-decoration: underline;
+}
+
+.linkbox {
+  text-decoration: none;
+  color: black;
+}
+
+/*********************************************************************************************************************/
+/************************************ Affichage d'un voeu unique *****************************************************/
+/*********************************************************************************************************************/
+h3 {
+  clear: both;
+  padding: 0 20px 20px 20px;
+  margin-bottom: 0;
+  font-family: 'Sofia', cursive;
+  font-size: 1.5em;
+  font-weight: normal;
+  text-align: center;
+}
+
+article.wish, article.app-form {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+article div {
+  border-bottom: 1px solid;
+}
+
+#wish {
+  padding: 0 20px 0 20px;
+}
+#wish a {
+  display: inherit;
+  text-align: center;
+  font-family: 'Sofia', cursive;
+  font-size: 1.1em;
+}
+
+.comment {
+  clear: both;
+  margin: 0px auto;
+  width: 60%;
+}
+.comment h4 {
+  margin: 0px auto;
+  font-weight: normal;
+  text-decoration: underline;
+  display: inline-block;
+}
+.comment h4.date {
+  float: right;
+}
+.comment p {
+  text-align: left;
+}
+.comment textarea {
+  margin: 10px auto;
+  width: 100%;
+}
+.comment label {
+  color: red;
+  font-weight: bold;
+  padding-left: 5px;
+}
+.comment input[type="submit"] {
+  display: block;
+  margin-top: 10px;
+}
+
+/*********************************************************************************************************************/
+/************************************ Page d'ajout d'un voeu *********************************************************/
+/*********************************************************************************************************************/
+.nocat header {
+  color: #d8d8d8;
+}
+
+.show {
+  font-family: 'Sofia', cursive;
+  font-size: 1.1em;
+}
+.show p {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+form {
+  margin: 0 auto;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+form p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+form p input:not([type=submit]),
+form p textarea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  /* fluid width */
+  display: block;
+  /* IE fix */
+}
+form p label {
+  width: 7em;
+  margin-right: 0.5em;
+  text-align: right;
+}
+form p.noflex {
+  display: block;
+  text-align: right;
+}
+form p.noflex input:not([type=submit]),
+form p.noflex textarea {
+  display: inline-block;
+}
+form .small {
+  margin: 0.5em;
+  font-size: 0.8em;
+}
+form input[type="submit"] {
+  margin: auto;
+}
+
+main.user {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+main.user a {
+  color: black;
+  text-decoration: none;
+  font-family: 'Sofia', cursive;
+  font-size: 1.5em;
+}
+main.user ul {
+  width: 100%;
+  list-style: none;
+}
+main.user li {
+  line-height: 3em;
+}
